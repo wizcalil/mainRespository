@@ -1,4 +1,4 @@
-package capstoneproject.jatransit;
+package capstoneproject.jatransit.ActivityHandler;
 
 import android.content.res.TypedArray;
 import android.location.Location;
@@ -18,16 +18,18 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity extends Fragment {
+import capstoneproject.jatransit.R;
+
+public class MapsFragment extends Fragment {
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
 
-    public static final String ARG_CATEGORY_NUMBER = "map";
+    public static final String ARG_STRING= "Map";
     View rootView;
     MapView mapView;
 
 
-    public MapsActivity() {
+    public MapsFragment() {
         // Empty constructor required for fragment subclasses
     }
     @Override
@@ -169,12 +171,12 @@ public class MapsActivity extends Fragment {
         mapView.onLowMemory();
     }
 
-    public static MapsActivity newInstance(int someInt, String someTitle) {
-        MapsActivity ofragment = new MapsActivity();
+    public static MapsFragment newInstance(int someInt, String s) {
+        MapsFragment mfragment = new MapsFragment();
         Bundle args = new Bundle();
-        args.putInt("Maps", someInt);
-        ofragment.setArguments(args);
-        return ofragment;
+        args.putInt(s, someInt);
+        mfragment.setArguments(args);
+        return mfragment;
     }
 
 

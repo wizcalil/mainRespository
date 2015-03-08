@@ -1,4 +1,4 @@
-package capstoneproject.jatransit;
+package capstoneproject.jatransit.ImageHandler;
 
 import android.content.Context;
 import android.view.View;
@@ -6,6 +6,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+
+import capstoneproject.jatransit.R;
 
 /**
  * Created by Caliph Cole on 03/04/2015.
@@ -17,7 +19,7 @@ public class ImageAdapter extends BaseAdapter {
     private Context mContext;
 
     // references to our images
-    private Integer[] mThumbIds1 = {R.drawable.nearby,R.drawable.route,R.drawable.trip,R.drawable.map,R.drawable.search,R.drawable.faq,R.drawable.terms} ;//resource link
+    private Integer[] mThumbIds1 = {R.drawable.nearby,R.drawable.route,R.drawable.trip,R.drawable.map,R.drawable.search,R.drawable.faq,R.drawable.terms,R.drawable.payment} ;//resource link
 
     public ImageAdapter(Context c) {
         mContext = c;

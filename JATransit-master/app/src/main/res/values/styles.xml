@@ -9,12 +9,13 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
 
-            <item name="android:background"> #007bb6</item>
+
 
     </style>
 
     <style name="ActionBar" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="android:displayOptions">homeAsUp</item>
+        <item name="android:background">#007bb6</item>
     </style>
 
 </resources>

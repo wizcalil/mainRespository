@@ -1,9 +1,11 @@
-package capstoneproject.jatransit;
+package capstoneproject.jatransit.SplashScreen;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+
+import capstoneproject.jatransit.MainActivity;
 
 /**
  * Created by Caliph Cole on 03/05/2015.

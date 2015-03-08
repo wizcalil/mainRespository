@@ -1,20 +1,17 @@
 package capstoneproject.jatransit;
 
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
 
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
-import com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelSlideListener;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelState;
+
+import capstoneproject.jatransit.ActivityHandler.HomeScreen;
+import capstoneproject.jatransit.ActivityHandler.MapsFragment;
 
 /**
  * Created by CaliphCole on 02/17/2015.
@@ -25,7 +22,7 @@ public class MainActivity extends ActionBarActivity{
 
     private SlidingUpPanelLayout mLayout;
 
-    private MapsActivity maps;
+    private MapsFragment maps;
 
     private HomeScreen home;
 
@@ -36,18 +33,10 @@ public class MainActivity extends ActionBarActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_layout);
 
-
-
-
-
-
-
-       // maps = MapsActivity.newInstance(0, maps.ARG_CATEGORY_NUMBER);
         home = HomeScreen.newInstance(0, "hello world");
         FragmentManager fragmentManager0 = getSupportFragmentManager();
 
         fragmentManager0.beginTransaction().add(R.id.container, home,"hello world").commit();
-
 
 
     }
@@ -57,7 +46,7 @@ public class MainActivity extends ActionBarActivity{
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_menu, menu);
 
-        MenuItem item = menu.findItem(R.id.action_toggle);
+        MenuItem item = menu.findItem(R.id.settings);
         /*if (mLayout != null) {
             if (mLayout.getPanelState() == SlidingUpPanelLayout.PanelState.HIDDEN) {
                 item.setTitle("Show Panel");
@@ -71,13 +60,14 @@ public class MainActivity extends ActionBarActivity{
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
+
         return super.onPrepareOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case R.id.action_toggle: {
+            case R.id.exit: {
                /* if (mLayout != null) {
                     if (mLayout.getPanelState() != PanelState.HIDDEN) {
                         mLayout.setPanelState(PanelState.HIDDEN);
@@ -89,7 +79,7 @@ public class MainActivity extends ActionBarActivity{
                 }*/
                 return true;
             }
-            case R.id.action_anchor: {
+            case R.id.settings: {
                /*if (mLayout != null) {
                     if (mLayout.getAnchorPoint() == 1.0f) {
                         mLayout.setAnchorPoint(0.7f);
