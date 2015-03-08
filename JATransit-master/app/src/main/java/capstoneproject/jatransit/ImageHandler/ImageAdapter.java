@@ -6,6 +6,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import capstoneproject.jatransit.R;
 
@@ -46,14 +49,19 @@ public class ImageAdapter extends BaseAdapter {
             imageView.setLayoutParams(new GridView.LayoutParams(200, 200));
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             imageView.setPadding(40, 40, 40, 40);
+
+           
         } else {
             imageView = (ImageView) convertView;
         }
 
         imageView.setImageResource(mThumbIds1[position]);
-        ;
+
+
+
         return imageView;
 
 
     }
+    private String[] label = {"nearby","route","trip","map","search","FAQ","terms","Payment"};
 }

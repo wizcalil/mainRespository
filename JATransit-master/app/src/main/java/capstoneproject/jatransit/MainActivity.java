@@ -1,5 +1,6 @@
 package capstoneproject.jatransit;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBar;
@@ -38,8 +39,10 @@ public class MainActivity extends ActionBarActivity{
         /**
          * Center title of actionbar
          */
+
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.actionbar_layout);
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xff005fbf));
 
         /**
          * Setting up the home screen fragment
