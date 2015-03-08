@@ -19,6 +19,7 @@ import capstoneproject.jatransit.R;
 public class HomeScreen extends Fragment {
 
 
+    public static final String ARG_STRING = "HOME";
     private View rootView;
 
     /**
