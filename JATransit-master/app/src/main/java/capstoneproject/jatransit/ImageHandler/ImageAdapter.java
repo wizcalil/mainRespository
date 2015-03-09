@@ -50,7 +50,7 @@ public class ImageAdapter extends BaseAdapter {
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             imageView.setPadding(40, 40, 40, 40);
 
-           
+
         } else {
             imageView = (ImageView) convertView;
         }

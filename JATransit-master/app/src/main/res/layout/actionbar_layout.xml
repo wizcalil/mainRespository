@@ -12,6 +12,8 @@
         android:text="HOME"
         android:textColor="#ffffff"
         android:id="@+id/mytext"
-        android:textSize="18sp" />
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
 
 </RelativeLayout>
