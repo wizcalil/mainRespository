@@ -4,5 +4,7 @@
     <string name="app_name">JATransit</string>
     <string name="title_activity">JA Transit</string>
     <string name="action_settings">Details</string>
+    <string name= "action_search">Search</string>
+    <string name = "search_hint"></string>
 
 </resources>

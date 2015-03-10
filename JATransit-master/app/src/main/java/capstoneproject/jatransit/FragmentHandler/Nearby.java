@@ -1,4 +1,4 @@
-package capstoneproject.jatransit.ActivityHandler;
+package capstoneproject.jatransit.FragmentHandler;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

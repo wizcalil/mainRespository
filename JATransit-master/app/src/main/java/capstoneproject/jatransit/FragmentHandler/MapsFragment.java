@@ -1,4 +1,4 @@
-package capstoneproject.jatransit.ActivityHandler;
+package capstoneproject.jatransit.FragmentHandler;
 
 import android.content.res.TypedArray;
 import android.location.Location;

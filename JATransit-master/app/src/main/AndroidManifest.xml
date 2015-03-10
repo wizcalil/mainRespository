@@ -65,6 +65,18 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="capstoneproject.jatransit.FragmentHandler.Faq"
+
+            android:label="@string/app_name"
+
+            >
+            <intent-filter>
+                <action android:name="capstoneproject.jatransit.ActivityHandler.Faq" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

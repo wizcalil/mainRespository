@@ -10,10 +10,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
-import com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelState;
 
-import capstoneproject.jatransit.ActivityHandler.HomeScreen;
-import capstoneproject.jatransit.ActivityHandler.MapsFragment;
+import capstoneproject.jatransit.FragmentHandler.HomeScreen;
+import capstoneproject.jatransit.FragmentHandler.MapsFragment;
 
 /**
  * Created by CaliphCole on 02/17/2015.
@@ -49,7 +48,7 @@ public class MainActivity extends ActionBarActivity{
          */
         home = HomeScreen.newInstance(0, "hello world");
         FragmentManager fragmentManager0 = getSupportFragmentManager();
-        fragmentManager0.beginTransaction().add(R.id.container, home,"hello world").commit();
+        fragmentManager0.beginTransaction().add(R.id.container, home,"hello world").addToBackStack(null).commit();
 
 
     }
@@ -60,8 +59,16 @@ public class MainActivity extends ActionBarActivity{
         inflater.inflate(R.menu.main_menu, menu);
 
         MenuItem item = menu.findItem(R.id.settings);
-
+       /*  Associate searchable configuration with the SearchView
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = (SearchView) menu.findItem(R.id.action_search)
+                .getActionView();
+        searchView.setSearchableInfo(searchManager
+                .getSearchableInfo(getComponentName()));
+*/
         return true;
+
+
     }
 
     @Override
@@ -86,12 +93,14 @@ public class MainActivity extends ActionBarActivity{
     }
 
     @Override
-    public void onBackPressed(){
-        if (mLayout != null &&
-                (mLayout.getPanelState() == PanelState.EXPANDED || mLayout.getPanelState() == PanelState.ANCHORED)) {
-            mLayout.setPanelState(PanelState.COLLAPSED);
-        } else {
+    public void onBackPressed() {
+
+        if(home.isVisible()){
+
+            finish();
+        }else
+
             super.onBackPressed();
-        }
+
     }
 }
