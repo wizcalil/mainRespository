@@ -1,4 +1,4 @@
-package capstoneproject.jatransit.ImageHandler;
+package capstoneproject.jatransit.Adapter;
 
 import android.content.Context;
 import android.view.View;
@@ -6,9 +6,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import capstoneproject.jatransit.R;
 

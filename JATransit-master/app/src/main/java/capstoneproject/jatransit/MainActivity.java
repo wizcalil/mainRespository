@@ -1,5 +1,7 @@
 package capstoneproject.jatransit;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -8,6 +10,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.SearchView;
 
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
@@ -58,17 +61,14 @@ public class MainActivity extends ActionBarActivity{
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_menu, menu);
 
-        MenuItem item = menu.findItem(R.id.settings);
-       /*  Associate searchable configuration with the SearchView
+        // Associate searchable configuration with the SearchView
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         SearchView searchView = (SearchView) menu.findItem(R.id.action_search)
                 .getActionView();
         searchView.setSearchableInfo(searchManager
                 .getSearchableInfo(getComponentName()));
-*/
-        return true;
 
-
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
@@ -80,14 +80,18 @@ public class MainActivity extends ActionBarActivity{
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case R.id.exit: {
+            case R.id.exit:
 
                 return true;
-            }
-            case R.id.settings: {
+
+            case R.id.settings:
 
                 return true;
-            }
+
+            case R.id.action_search:
+
+
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }

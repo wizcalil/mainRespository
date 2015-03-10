@@ -11,7 +11,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
 
-import capstoneproject.jatransit.ImageHandler.ImageAdapter;
+import capstoneproject.jatransit.Adapter.ImageAdapter;
 import capstoneproject.jatransit.R;
 
 /**
@@ -100,40 +100,6 @@ public class HomeScreen extends Fragment {
                                 }
                                 ft0.addToBackStack(null);
                                 ft0.commit();
-                                try {
-                                    if (route.isAdded()) {
-                                        ft0.hide(route);
-                                    }
-                                    if (tripPlanner.isAdded()) {
-                                        ft0.hide(tripPlanner);
-                                    }
-                                    if (map.isAdded()) {
-                                        ft0.hide(map);
-                                    }
-                                    if (faq.isAdded()) {
-                                        ft0.hide(faq);
-                                    }
-                                    if (termsCondition.isAdded()) {
-                                        ft0.hide(termsCondition);
-                                    }
-                                    if (pay.isAdded()) {
-                                        ft0.hide(pay);
-                                    }
-
-
-                                }catch(NullPointerException e){
-
-                                    e.printStackTrace();
-                                }
-
-                              /*  nearby = Nearby.newInstance(0, nearby.ARG_STRING);
-                                fragmentManager0 = getActivity().getSupportFragmentManager();
-
-                                fragmentManager0.beginTransaction().replace(R.id.container, nearby,nearby.ARG_STRING).commit();
-                                Toast.makeText(getActivity(), "Nearby",
-                                        Toast.LENGTH_SHORT).show();
-
-                                */
 
                                 break;
                             case 1:
@@ -153,11 +119,7 @@ public class HomeScreen extends Fragment {
                                     ft1.addToBackStack(null);
                                     ft1.commit();
 
-                                /* fragmentManager1 = getActivity().getSupportFragmentManager();
 
-                                fragmentManager1.beginTransaction().replace(R.id.container, route,route.ARG_STRING).commit();
-
-                                    */
 
                                 Toast.makeText(getActivity(), "routes",
                                         Toast.LENGTH_SHORT).show();
@@ -178,11 +140,7 @@ public class HomeScreen extends Fragment {
                                 ft2.commit();
 
 
-                               /* tripPlanner = TripPlanner.newInstance(2, tripPlanner.ARG_STRING);
-                                fragmentManager2 = getActivity().getSupportFragmentManager();
-
-                                fragmentManager2.beginTransaction().replace(R.id.container, tripPlanner,route.ARG_STRING).commit();
-                                */Toast.makeText(getActivity(), "Trip Planner",
+                              Toast.makeText(getActivity(), "Trip Planner",
                                         Toast.LENGTH_SHORT).show();
                                 break;
                             case 3:
@@ -200,11 +158,7 @@ public class HomeScreen extends Fragment {
                                 ft3.commit();
 
 
-                               /* map = MapsFragment.newInstance(3, map.ARG_STRING);
-                                fragmentManager3 = getActivity().getSupportFragmentManager();
 
-                                fragmentManager3.beginTransaction().replace(R.id.container, map,map.ARG_STRING).commit();
-                                */
                                 Toast.makeText(getActivity(), "map",
                                         Toast.LENGTH_SHORT).show();
                                 break;
@@ -231,11 +185,7 @@ public class HomeScreen extends Fragment {
 
 
 
-                              /* faq= Faq.newInstance(5, faq.ARG_STRING);
-                               fragmentManager5 = getActivity().getSupportFragmentManager();
-
-                                fragmentManager5.beginTransaction().replace(R.id.container, faq,faq.ARG_STRING).commit();
-                                */Toast.makeText(getActivity(), "faq",
+                                Toast.makeText(getActivity(), "faq",
                                         Toast.LENGTH_SHORT).show();
                                 break;
                             case 6:
@@ -252,11 +202,7 @@ public class HomeScreen extends Fragment {
                                 }
                                 ft6.addToBackStack(null);
                                 ft6.commit();
-                               /* termsCondition = TermsCondition.newInstance(6, termsCondition.ARG_STRING);
-                                fragmentManager6 = getActivity().getSupportFragmentManager();
-
-                                fragmentManager6.beginTransaction().replace(R.id.container, termsCondition,termsCondition.ARG_STRING).commit();
-                                */Toast.makeText(getActivity(), "terms and condition",
+                               Toast.makeText(getActivity(), "terms and condition",
                                         Toast.LENGTH_SHORT).show();
                                 break;
 
