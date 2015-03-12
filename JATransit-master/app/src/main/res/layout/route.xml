@@ -14,12 +14,18 @@
         android:src="@drawable/yellowbus" >
     </ImageView>
 
+
+    <!--<ListView
+        android:id="@+id/listView"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"/>-->
+
     <TextView
         android:id="@+id/label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@+id/label"
-        android:textSize="20px"
+        android:textSize="40px"
         android:layout_marginLeft="105px">
 
     </TextView>

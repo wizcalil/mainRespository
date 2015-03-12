@@ -7,5 +7,5 @@
         android:layout_height="match_parent"
         android:id="@+id/splash"
         android:layout_gravity="center_vertical"
-        android:src="@drawable/splashscreen"/>
+        android:src="@drawable/yellowbus"/>
 </LinearLayout>

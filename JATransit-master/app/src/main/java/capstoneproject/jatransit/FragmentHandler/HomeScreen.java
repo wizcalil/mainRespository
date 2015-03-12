@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,13 +35,7 @@ public class HomeScreen extends Fragment {
     private TermsCondition termsCondition;
     private TripPlanner tripPlanner;
     private Payment pay;
-    FragmentManager fragmentManager0;
-    FragmentManager fragmentManager1;
-    FragmentManager fragmentManager2;
-    FragmentManager fragmentManager3;
-    FragmentManager fragmentManager5;
-    FragmentManager fragmentManager6;
-    FragmentManager fragmentManager7;
+    android.app.ActionBar actionbar;
 
     /**
      * SetUp GridView for home screen
@@ -52,16 +47,7 @@ public class HomeScreen extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        /*if (savedInstanceState == null){
-            nearby = Nearby.newInstance(0,"Nearby");
-            map =  MapsFragment.newInstance (1,"Map");
-            faq = Faq.newInstance(2,"FAQ");
-            nfcBusTicket = NFCBusTicket.newInstance(3,"NFC");
-            route  = Route.newInstance(4,"Route");
-            termsCondition = TermsCondition.newInstance(5,"Terms");
-            tripPlanner  = TripPlanner.newInstance(6,"Trip");
 
-        }*/
          rootView = inflater.inflate(R.layout.homescreen, container,
                 false);
 
@@ -100,7 +86,8 @@ public class HomeScreen extends Fragment {
                                 }
                                 ft0.addToBackStack(null);
                                 ft0.commit();
-
+                               /* actionbar = getActivity().getActionBar();
+                                actionbar.setTitle(getResources().getString(R.string.nearby));*/
                                 break;
                             case 1:
 
