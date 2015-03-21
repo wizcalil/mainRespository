@@ -18,7 +18,7 @@ public class TermsCondition extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
 
-        rootView = inflater.inflate(R.layout.termsandcondition, container,false);
+        rootView = inflater.inflate(R.layout.about, container,false);
 
         return rootView;
     }

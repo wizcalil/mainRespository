@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import capstoneproject.jatransit.Adapter.FeedListAdapter;
+
 import capstoneproject.jatransit.MainActivity;
 import capstoneproject.jatransit.R;
 import capstoneproject.jatransit.app.AppController;
