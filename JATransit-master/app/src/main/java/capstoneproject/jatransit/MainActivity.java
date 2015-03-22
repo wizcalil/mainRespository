@@ -11,8 +11,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.SearchView;
+import android.widget.TextView;
 
-import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
 import capstoneproject.jatransit.FragmentHandler.HomeScreen;
 import capstoneproject.jatransit.FragmentHandler.MapsFragment;
@@ -24,11 +24,12 @@ public class MainActivity extends ActionBarActivity{
 
     private static final String TAG = "DemoActivity";
 
-    private SlidingUpPanelLayout mLayout;
+
 
     private MapsFragment maps;
 
     private HomeScreen home;
+    public TextView text;
 
 
 
@@ -38,6 +39,7 @@ public class MainActivity extends ActionBarActivity{
         setContentView(R.layout.main_layout);//main layout
 
 
+
         /**
          * Center title of actionbar
          */
@@ -45,6 +47,7 @@ public class MainActivity extends ActionBarActivity{
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.actionbar_layout);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xff005fbf));
+
 
         /**
          * Setting up the home screen fragment
@@ -103,7 +106,7 @@ public class MainActivity extends ActionBarActivity{
 
             finish();
         }else
-
+            home.onBackPressed();
             super.onBackPressed();
 
     }

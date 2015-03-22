@@ -5,14 +5,18 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import capstoneproject.jatransit.Adapter.ImageAdapter;
+import capstoneproject.jatransit.MainActivity;
 import capstoneproject.jatransit.R;
 
 /**
@@ -32,10 +36,10 @@ public class HomeScreen extends Fragment {
     private Faq faq;
     private NFCBusTicket nfcBusTicket;
     private Route route;
-    private TermsCondition termsCondition;
+    private AboutUs AboutUs;
     private TripPlanner tripPlanner;
     private Payment pay;
-    android.app.ActionBar actionbar;
+    private TextView text;
 
     /**
      * SetUp GridView for home screen
@@ -55,7 +59,9 @@ public class HomeScreen extends Fragment {
         ((GridView) rootView.findViewById(R.id.option))
                 .setAdapter(new ImageAdapter(getActivity()));
 
-
+        text = new TextView(getActivity());
+        text = (TextView) getActivity().findViewById(R.id.title);
+        text.setText("HOME");
         gridViewListener();//handles the grid view listener
 
         return rootView;
@@ -86,8 +92,9 @@ public class HomeScreen extends Fragment {
                                 }
                                 ft0.addToBackStack(null);
                                 ft0.commit();
-                               /* actionbar = getActivity().getActionBar();
-                                actionbar.setTitle(getResources().getString(R.string.nearby));*/
+
+                               text.setText( nearby.ARG_STRING);
+
                                 break;
                             case 1:
 
@@ -108,8 +115,7 @@ public class HomeScreen extends Fragment {
 
 
 
-                                Toast.makeText(getActivity(), "routes",
-                                        Toast.LENGTH_SHORT).show();
+                                text.setText(route.ARG_STRING);
                                 break;
                             case 2:
 
@@ -127,8 +133,7 @@ public class HomeScreen extends Fragment {
                                 ft2.commit();
 
 
-                              Toast.makeText(getActivity(), "Trip Planner",
-                                        Toast.LENGTH_SHORT).show();
+                                text.setText(tripPlanner.ARG_STRING);
                                 break;
                             case 3:
                                 map = MapsFragment.newInstance(3, map.ARG_STRING);
@@ -146,8 +151,7 @@ public class HomeScreen extends Fragment {
 
 
 
-                                Toast.makeText(getActivity(), "map",
-                                        Toast.LENGTH_SHORT).show();
+                                text.setText(map.ARG_STRING);
                                 break;
                             case 4:
                                 //Set up widget
@@ -172,25 +176,23 @@ public class HomeScreen extends Fragment {
 
 
 
-                                Toast.makeText(getActivity(), "faq",
-                                        Toast.LENGTH_SHORT).show();
+                                text.setText(faq.ARG_STRING);
                                 break;
                             case 6:
 
-                                termsCondition =TermsCondition.newInstance(1, termsCondition.ARG_STRING);
+                                AboutUs =AboutUs.newInstance(1, AboutUs.ARG_STRING);
                                 FragmentManager fm6 = getActivity().getSupportFragmentManager();
                                 FragmentTransaction ft6 = fm6.beginTransaction();
 
 
-                                if (termsCondition.isAdded()) {
-                                    ft6.show(termsCondition);
+                                if (AboutUs.isAdded()) {
+                                    ft6.show(AboutUs);
                                 } else {
-                                    ft6.replace(R.id.container, termsCondition,termsCondition.ARG_STRING);
+                                    ft6.replace(R.id.container, AboutUs,AboutUs.ARG_STRING);
                                 }
                                 ft6.addToBackStack(null);
                                 ft6.commit();
-                               Toast.makeText(getActivity(), "terms and condition",
-                                        Toast.LENGTH_SHORT).show();
+                                text.setText(AboutUs.ARG_STRING);
                                 break;
 
                             case 7:
@@ -209,16 +211,17 @@ public class HomeScreen extends Fragment {
                                 ft7.commit();
 
 
-                             /*   pay = Payment.newInstance(7, termsCondition.ARG_STRING);
-                                fragmentManager7 = getActivity().getSupportFragmentManager();
-
-                                fragmentManager7.beginTransaction().replace(R.id.container, pay,pay.ARG_STRING).commit();
-                               */ break;
+                                text.setText(pay.ARG_STRING);
+                                break;
 
                         }
                     }
                 });
 
+    }
+
+    private ActionBar getActionBar() {
+        return ((ActionBarActivity) getActivity()).getSupportActionBar();
     }
 
     public static HomeScreen newInstance(int someInt, String someTitle) {
@@ -236,7 +239,8 @@ public class HomeScreen extends Fragment {
 
         }
         else {
-            getFragmentManager().popBackStack();
+            
+            text.setText("HOME");
         }
     }
 }

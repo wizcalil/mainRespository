@@ -190,7 +190,7 @@ public class Route extends ListFragment {
                 "78 Christian Gardens via  Gregory Pk.Hagley Pk Road to Half Way Tree", "68  Greater Portmore via Gregory Park to Spanish Town ", "50ex Christian Gardens via  Gregory Pk.Hagley Pk Road to Half Way Tree", "75ex Christian Gardens via  Gregory Pk.Hagley Pk Road to Half Way Tree", "500 Greater Portmore via Gregory Park to Spanish Town",
                 "31 Hellshire via Hagley Pk Road to Half Way Tree", "32B Greater Portmore via Gregory Park to Spanish Town" };
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
-                R.layout.route,R.id.label, values);
+                R.layout.route,R.id.route, values);
         setListAdapter(adapter);
 
     }

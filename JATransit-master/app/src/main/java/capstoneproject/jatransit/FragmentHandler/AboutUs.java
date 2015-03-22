@@ -11,9 +11,9 @@ import capstoneproject.jatransit.R;
 /**
  * Created by Caliph Cole on 03/05/2015.
  */
-public class TermsCondition extends Fragment {
+public class AboutUs extends Fragment {
 
-    public static final String ARG_STRING = "Terms And Condition";
+    public static final String ARG_STRING = "About Us";
     private View rootView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
@@ -23,8 +23,8 @@ public class TermsCondition extends Fragment {
         return rootView;
     }
 
-    public static TermsCondition newInstance(int someInt, String s) {
-        TermsCondition tfragment = new TermsCondition();
+    public static AboutUs newInstance(int someInt, String s) {
+        AboutUs tfragment = new AboutUs();
         Bundle args = new Bundle();
         args.putInt(s, someInt);
         tfragment.setArguments(args);
