@@ -239,7 +239,7 @@ public class HomeScreen extends Fragment {
 
         }
         else {
-            
+
             text.setText("HOME");
         }
     }
