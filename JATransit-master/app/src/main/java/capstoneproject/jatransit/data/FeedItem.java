@@ -5,14 +5,22 @@ package capstoneproject.jatransit.data;
  */
 public class FeedItem {
 
-    private String route,origin,via,destination;
-    public FeedItem(String route, String origin, String via,String destination){
+    private String route;
+    private String origin;
+    private String via;
+    private String destination;
+
+
+
+    private String timeStamp;
+    public FeedItem(String route, String origin, String via,String destination,String timeStamp){
 
         super();
         this.route = route;
         this.origin = origin;
         this.via = via;
         this.destination = destination;
+        this.timeStamp = timeStamp;
 
     }
     public FeedItem(){
@@ -56,7 +64,13 @@ public class FeedItem {
         this.destination = destination;
     }
 
+    public String getTimeStamp() {
+        return timeStamp;
+    }
 
+    public void setTimeStamp(String timeStamp) {
+        this.timeStamp = timeStamp;
+    }
 
 
 

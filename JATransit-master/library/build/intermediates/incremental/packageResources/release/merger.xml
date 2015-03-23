@@ -1,18 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\Caliph Cole\Documents\GitHub\mainRespository\JATransit-master\library\res"><file name="above_shadow" path="C:\Users\Caliph Cole\Documents\GitHub\mainRespository\JATransit-master\library\res\drawable\above_shadow.xml" qualifiers="" type="drawable"/><file name="below_shadow" path="C:\Users\Caliph Cole\Documents\GitHub\mainRespository\JATransit-master\library\res\drawable\below_shadow.xml" qualifiers="" type="drawable"/><file path="C:\Users\Caliph Cole\Documents\GitHub\mainRespository\JATransit-master\library\res\values\attrs.xml" qualifiers=""><declare-styleable name="SlidingUpPanelLayout">
-        <attr format="dimension" name="umanoPanelHeight"/>
-        <attr format="dimension" name="umanoShadowHeight"/>
-        <attr format="dimension" name="umanoParalaxOffset"/>
-        <attr format="color" name="umanoFadeColor"/>
-        <attr format="integer" name="umanoFlingVelocity"/>
-        <attr format="reference" name="umanoDragView"/>
-        <attr format="boolean" name="umanoOverlay"/>
-        <attr format="boolean" name="umanoClipPanel"/>
-        <attr format="float" name="umanoAnchorPoint"/>
-        <attr format="enum" name="umanoInitialState">
-            <enum name="expanded" value="0"/>
-            <enum name="collapsed" value="1"/>
-            <enum name="anchored" value="2"/>
-            <enum name="hidden" value="3"/>
-        </attr>
-    </declare-styleable></file></source><source path="C:\Users\Caliph Cole\Documents\GitHub\mainRespository\JATransit-master\library\build\generated\res\rs\release"/><source path="C:\Users\Caliph Cole\Documents\GitHub\mainRespository\JATransit-master\library\build\generated\res\generated\release"/></dataSet><dataSet config="release"><source path="C:\Users\Caliph Cole\Documents\GitHub\mainRespository\JATransit-master\library\src\release\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="SlidingUpPanelLayout"><attr format="dimension" name="umanoPanelHeight"/><attr format="dimension" name="umanoShadowHeight"/><attr format="dimension" name="umanoParalaxOffset"/><attr format="color" name="umanoFadeColor"/><attr format="integer" name="umanoFlingVelocity"/><attr format="reference" name="umanoDragView"/><attr format="boolean" name="umanoOverlay"/><attr format="boolean" name="umanoClipPanel"/><attr format="float" name="umanoAnchorPoint"/><attr format="enum" name="umanoInitialState"><enum name="expanded" value="0"/><enum name="collapsed" value="1"/><enum name="anchored" value="2"/><enum name="hidden" value="3"/></attr></declare-styleable></configuration></mergedItems></merger>
+<merger version="3"><dataSet config="main"><source path="C:\Users\Caliph Cole\Documents\GitHub\MaterialEditText\library\src\main\res"><file name="met_ic_clear" path="C:\Users\Caliph Cole\Documents\GitHub\MaterialEditText\library\src\main\res\drawable-hdpi\met_ic_clear.png" qualifiers="hdpi-v4" type="drawable"/><file name="met_ic_close" path="C:\Users\Caliph Cole\Documents\GitHub\MaterialEditText\library\src\main\res\drawable-hdpi\met_ic_close.png" qualifiers="hdpi-v4" type="drawable"/><file name="met_ic_clear" path="C:\Users\Caliph Cole\Documents\GitHub\MaterialEditText\library\src\main\res\drawable-mdpi\met_ic_clear.png" qualifiers="mdpi-v4" type="drawable"/><file name="met_ic_close" path="C:\Users\Caliph Cole\Documents\GitHub\MaterialEditText\library\src\main\res\drawable-mdpi\met_ic_close.png" qualifiers="mdpi-v4" type="drawable"/><file name="met_ic_clear" path="C:\Users\Caliph Cole\Documents\GitHub\MaterialEditText\library\src\main\res\drawable-xhdpi\met_ic_clear.png" qualifiers="xhdpi-v4" type="drawable"/><file name="met_ic_close" path="C:\Users\Caliph Cole\Documents\GitHub\MaterialEditText\library\src\main\res\drawable-xhdpi\met_ic_close.png" qualifiers="xhdpi-v4" type="drawable"/><file name="met_ic_clear" path="C:\Users\Caliph Cole\Documents\GitHub\MaterialEditText\library\src\main\res\drawable-xxhdpi\met_ic_clear.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="met_ic_close" path="C:\Users\Caliph Cole\Documents\GitHub\MaterialEditText\library\src\main\res\drawable-xxhdpi\met_ic_close.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="met_ic_clear" path="C:\Users\Caliph Cole\Documents\GitHub\MaterialEditText\library\src\main\res\drawable-xxxhdpi\met_ic_clear.png" qualifiers="xxxhdpi-v4" type="drawable"/><file name="met_ic_close" path="C:\Users\Caliph Cole\Documents\GitHub\MaterialEditText\library\src\main\res\drawable-xxxhdpi\met_ic_close.png" qualifiers="xxxhdpi-v4" type="drawable"/><file path="C:\Users\Caliph Cole\Documents\GitHub\MaterialEditText\library\src\main\res\values\attrs.xml" qualifiers=""><declare-styleable name="MaterialEditText">
+    <!-- The base color of the line and the texts. Default is black. -->
+    <attr format="color" name="met_baseColor"/>
+    <!-- The highlight color of the line, and the floating label if the highlightFloatingLabel is true. -->
+    <attr format="color" name="met_primaryColor"/>
+    <!-- How the floating label should be shown. Default is none -->
+    <attr name="met_floatingLabel">
+      <enum name="none" value="0"/>
+      <enum name="normal" value="1"/>
+      <enum name="highlight" value="2"/>
+    </attr>
+    <!-- The color for when something is wrong.(e.g. exceeding max characters) -->
+    <attr format="color" name="met_errorColor"/>
+    <!-- Min characters count limit. 0 means no limit. -->
+    <attr format="integer" name="met_minCharacters"/>
+    <!-- max Characters count limit. 0 means no limit. -->
+    <attr format="integer" name="met_maxCharacters"/>
+    <!-- Whether to show the bottom ellipsis in singleLine mode -->
+    <attr format="boolean" name="met_singleLineEllipsis"/>
+    <!-- Reserved bottom text lines count, no matter if there is some helper/error text. -->
+    <attr format="integer" name="met_minBottomTextLines"/>
+    <!-- Helper text at the bottom -->
+    <attr format="string" name="met_helperText"/>
+    <!-- Helper text color -->
+    <attr format="color" name="met_helperTextColor"/>
+    <!-- Font of the paint used to draw accent texts -->
+    <attr format="string" name="met_accentTypeface"/>
+    <!-- Font used on view -->
+    <attr format="string" name="met_typeface"/>
+    <!-- Custom float label text -->
+    <attr format="string" name="met_floatingLabelText"/>
+    <!-- spacing between the main text and the floating label -->
+    <attr format="dimension" name="met_floatingLabelSpacing"/>
+    <!-- Hide underline -->
+    <attr format="boolean" name="met_hideUnderline"/>
+    <!-- Underline's color -->
+    <attr format="color" name="met_underlineColor"/>
+    <!-- Auto validate -->
+    <attr format="boolean" name="met_autoValidate"/>
+    <!-- Left icon -->
+    <attr format="reference" name="met_iconLeft"/>
+    <!-- Right icon -->
+    <attr format="reference" name="met_iconRight"/>
+    <!-- Padding between icon(s) and the main area. 8dp by default. -->
+    <attr format="dimension" name="met_iconPadding"/>
+    <!-- Clear button -->
+    <attr format="boolean" name="met_clearButton"/>
+    <!-- The floating label's text size. 12sp by default. -->
+    <attr format="dimension" name="met_floatingLabelTextSize"/>
+    <!-- The floating label's text color. -1 by default. -->
+    <attr format="color" name="met_floatingLabelTextColor"/>
+    <!-- The bottom texts' size. 12sp by default. -->
+    <attr format="dimension" name="met_bottomTextSize"/>
+    <!-- Always show the floating label, instead of animating it in/out. -->
+    <attr format="boolean" name="met_floatingLabelAlwaysShown"/>
+    <!-- Always show the helper text, no matter if the edit text is focused. -->
+    <attr format="boolean" name="met_helperTextAlwaysShown"/>
+  </declare-styleable></file><file path="C:\Users\Caliph Cole\Documents\GitHub\MaterialEditText\library\src\main\res\values\dimens.xml" qualifiers=""><dimen name="default_padding_bottom">8dp</dimen><dimen name="floating_label_text_size">12sp</dimen><dimen name="inner_padding_left">0dp</dimen><dimen name="inner_components_spacing">8dp</dimen><dimen name="inner_padding_right">0dp</dimen><dimen name="bottom_ellipsis_height">4dp</dimen><dimen name="bottom_text_size">12sp</dimen><dimen name="default_padding_top">8dp</dimen></file></source><source path="C:\Users\Caliph Cole\Documents\GitHub\MaterialEditText\library\build\generated\res\rs\release"/><source path="C:\Users\Caliph Cole\Documents\GitHub\MaterialEditText\library\build\generated\res\generated\release"/></dataSet><dataSet config="release"><source path="C:\Users\Caliph Cole\Documents\GitHub\MaterialEditText\library\src\release\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="MaterialEditText"><attr format="color" name="met_baseColor"/><attr format="color" name="met_primaryColor"/><attr name="met_floatingLabel"><enum name="none" value="0"/><enum name="normal" value="1"/><enum name="highlight" value="2"/></attr><attr format="color" name="met_errorColor"/><attr format="integer" name="met_minCharacters"/><attr format="integer" name="met_maxCharacters"/><attr format="boolean" name="met_singleLineEllipsis"/><attr format="integer" name="met_minBottomTextLines"/><attr format="string" name="met_helperText"/><attr format="color" name="met_helperTextColor"/><attr format="string" name="met_accentTypeface"/><attr format="string" name="met_typeface"/><attr format="string" name="met_floatingLabelText"/><attr format="dimension" name="met_floatingLabelSpacing"/><attr format="boolean" name="met_hideUnderline"/><attr format="color" name="met_underlineColor"/><attr format="boolean" name="met_autoValidate"/><attr format="reference" name="met_iconLeft"/><attr format="reference" name="met_iconRight"/><attr format="dimension" name="met_iconPadding"/><attr format="boolean" name="met_clearButton"/><attr format="dimension" name="met_floatingLabelTextSize"/><attr format="color" name="met_floatingLabelTextColor"/><attr format="dimension" name="met_bottomTextSize"/><attr format="boolean" name="met_floatingLabelAlwaysShown"/><attr format="boolean" name="met_helperTextAlwaysShown"/></declare-styleable></configuration></mergedItems></merger>
